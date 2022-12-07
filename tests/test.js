@@ -2,7 +2,7 @@
 const { test, expect } = require("@playwright/test");
 const { MainPage } = require("../tests/PageObject/MainPage");
 const { WikiPage } = require("../tests/PageObject/WikiPage");
-const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms)); // only create delay to see something in test
+const delay = (ms) => new Promise((a) => setTimeout(a, ms)); // only create delay to see something in test
 let mainPage;
 let wikiPage;
 
