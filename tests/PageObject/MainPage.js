@@ -31,6 +31,7 @@ exports.MainPage = class MainPage {
             '[href="/projects/redmine/repository"]'
         ); //Repository
         //
+        
     }
 
     async goto() {
