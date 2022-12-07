@@ -39,10 +39,10 @@ exports.MainPage = class MainPage {
         await this.page.goto("https://www.redmine.org/");
     }
     //
-    async clickReview() {   
-        await expect(this.reviewLink).toBeVisible();
-        await expect(this.reviewLink).toHaveText("Overview")
-        await this.reviewLink.click();     
+    async clickReviewNavTab(selectedElement) {   
+        await expect(selectedElement).toBeVisible();
+        await expect(selectedElement).toHaveText("Overview")
+        await selectedElement.click();     
     }
     async clickDownload() {
         await this.downloadLink.click();

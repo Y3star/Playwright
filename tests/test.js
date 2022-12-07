@@ -6,13 +6,15 @@ const delay = (ms) => new Promise((a) => setTimeout(a, ms)); // only create dela
 let mainPage;
 let wikiPage;
 
+
+
 test("Homepage has title and input to intro page", async ({ page }) => {
     mainPage = new MainPage(page);
     wikiPage = new WikiPage(page);
 
     await mainPage.goto();
 
-    await mainPage.clickReview();
+    await mainPage.clickReviewNavTab(mainPage.reviewLink);
     await delay(250);
 
     await mainPage.clickDownload();
