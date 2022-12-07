@@ -14,6 +14,7 @@ test("Homepage has title and input to intro page", async ({ page }) => {
 
     await mainPage.clickReview();
     await delay(250);
+
     await mainPage.clickDownload();
     await delay(250);
     await mainPage.clickActivity();
@@ -36,6 +37,7 @@ test("Homepage has title and input to intro page", async ({ page }) => {
 
     await mainPage.clickWiki();
     await delay(250);
+
     await expect(wikiPage.redmineList).toHaveText([
         "Redmine",
         "Features",
@@ -44,6 +46,8 @@ test("Homepage has title and input to intro page", async ({ page }) => {
         "Support & getting help",
         "Contributing and helping out",
         "Who uses Redmine?",
-        "Redmine books",
+        "Redmine books"
     ]);
+
+    
 });

@@ -1,4 +1,5 @@
 // MainPage.js
+const { test, expect } = require("@playwright/test");
 
 function ganerateSrting(length) {
     let result = "";
@@ -38,8 +39,10 @@ exports.MainPage = class MainPage {
         await this.page.goto("https://www.redmine.org/");
     }
     //
-    async clickReview() {
-        await this.reviewLink.click();
+    async clickReview() {   
+        await expect(this.reviewLink).toBeVisible();
+        await expect(this.reviewLink).toHaveText("Overview")
+        await this.reviewLink.click();     
     }
     async clickDownload() {
         await this.downloadLink.click();
@@ -54,7 +57,9 @@ exports.MainPage = class MainPage {
         await this.tasksLink.click();
     }
     async clickNews() {
+        // expect
         await this.newsLink.click();
+        // expect url
     }
     async clickWiki() {
         await this.wikiLink.click();
