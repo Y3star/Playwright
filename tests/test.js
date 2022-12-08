@@ -4,7 +4,7 @@ const { MainPage } = require("../tests/PageObject/MainPage");
 const { WikiPage } = require("../tests/PageObject/WikiPage");
 const delay = (ms) => new Promise((a) => setTimeout(a, ms)); // only create delay to see something in test
 test.use({ viewport: { width: 1920, height: 1080 } }); // local config for size window
-test.use({ locale: "en-GB" });
+test.use({ locale: "en-GB" }); // local config for eng Page // need to assert 
 let mainPage;
 let wikiPage;
 
