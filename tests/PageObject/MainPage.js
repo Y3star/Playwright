@@ -32,64 +32,64 @@ exports.MainPage = class MainPage {
             '[href="/projects/redmine/repository"]'
         ); //Repository
         //
-        
     }
 
     async goto() {
         await this.page.goto("https://www.redmine.org/");
     }
     //
-    async methodReview(selectedElement) {   
+    async methodReview(selectedElement) {
         await expect(selectedElement).toBeVisible();
-        await expect(selectedElement).toHaveText("Overview")
-        await selectedElement.click();     
+        await expect(selectedElement).toHaveText("Overview");
+        await selectedElement.click();
     }
     async methodDownload(selectedElement) {
         await expect(selectedElement).toBeVisible();
-        await expect(selectedElement).toHaveText("Download")
+        await expect(selectedElement).toHaveText("Download");
         await selectedElement.click();
     }
     async methodActivity(selectedElement) {
         await expect(selectedElement).toBeVisible();
-        await expect(selectedElement).toHaveText("Activity")
+        await expect(selectedElement).toHaveText("Activity");
         await selectedElement.click();
     }
     async methodRoadmap(selectedElement) {
         await expect(selectedElement).toBeVisible();
-        await expect(selectedElement).toHaveText("Roadmap")
+        await expect(selectedElement).toHaveText("Roadmap");
         await selectedElement.click();
     }
     async methodTasks(selectedElement) {
         await expect(selectedElement).toBeVisible();
-        await expect(selectedElement).toHaveText("Issues")
+        await expect(selectedElement).toHaveText("Issues");
         await selectedElement.click();
     }
     async methodNews(selectedElement) {
         await expect(selectedElement).toBeVisible();
-        await expect(selectedElement).toHaveText("News")
+        await expect(selectedElement).toHaveText("News");
         await selectedElement.click();
     }
     async methodWiki(selectedElement) {
         await expect(selectedElement).toBeVisible();
-        await expect(selectedElement).toHaveText("Wiki")
+        await expect(selectedElement).toHaveText("Wiki");
         await selectedElement.click();
     }
 
     async methodForums(selectedElement) {
         await expect(selectedElement).toBeVisible();
-        await expect(selectedElement).toHaveText("Forums")
+        await expect(selectedElement).toHaveText("Forums");
         await selectedElement.click();
     }
 
     async methodRepository(selectedElement) {
         await expect(selectedElement).toBeVisible();
-        await expect(selectedElement).toHaveText("Repository")
+        await expect(selectedElement).toHaveText("Repository");
         await selectedElement.click();
     }
     //
     async methodGenerateText() {
-        await expect(inputSearchInput).toBeVisible();
-        await this.inputSearchInput.screenshot({ path: 'input.png' });
+        await this.inputSearchInput.click();
+        await expect(this.inputSearchInput).toBeVisible();
+        await this.inputSearchInput.screenshot({ path: "input.png" });
         await this.inputSearchInput.fill(ganerateSrting(15));
     }
 };
