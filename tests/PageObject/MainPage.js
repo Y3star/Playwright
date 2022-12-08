@@ -87,8 +87,9 @@ exports.MainPage = class MainPage {
         await selectedElement.click();
     }
     //
-
-    async ganerateText() {
+    async methodGenerateText() {
+        await expect(inputSearchInput).toBeVisible();
+        await this.inputSearchInput.screenshot({ path: 'input.png' });
         await this.inputSearchInput.fill(ganerateSrting(15));
     }
 };

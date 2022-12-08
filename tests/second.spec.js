@@ -15,42 +15,15 @@ test.beforeAll(async ({ browser }) => {
     wikiPage = new WikiPage(page);
 });
 
-
-test("click,comparing text and whether an element is visible", async () => {
+test("Assert ul , and written text in search input", async () => {
     await mainPage.goto();
-    await mainPage.methodReview(mainPage.reviewLink);
-    await delay(250);
+    await delay(300)
 
-    await mainPage.methodDownload(mainPage.downloadLink);
-    await delay(250);
+    await mainPage.methodGenerateText();
+    await delay(300);
 
-    await mainPage.methodActivity(mainPage.activityLink);
-    await delay(250);
-
-    await mainPage.methodRoadmap(mainPage.roadmapLink);
-    await delay(250);
-
-    await mainPage.methodTasks(mainPage.tasksLink);
-    await delay(250);
-
-    await mainPage.methodNews(mainPage.newsLink);
-    await delay(250);
-
-    await mainPage.methodWiki(mainPage.wikiLink);
-    await delay(250);
-
-    await mainPage.methodForums(mainPage.forumsLink);
-    await delay(250);
-
-    await mainPage.methodRepository(mainPage.repositoryLink);
-    await delay(250);
-    
-    await mainPage.ganerateText();
-    await delay(1000);
-
-    await mainPage.methodWiki(mainPage.wikiLink);
-    await delay(250);
-
+    await wikiPage.scrElem();
+    await delay(300)
     await expect(wikiPage.redmineList).toHaveText([
         "Redmine",
         "Features",
@@ -61,5 +34,6 @@ test("click,comparing text and whether an element is visible", async () => {
         "Who uses Redmine?",
         "Redmine books",
     ]);
-});
 
+    
+})

@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "npx playwright test test.js --headed"
+    "test1": "npx playwright test first.spec.js --headed",
+    "test2": "npx playwright test second.spec.js --headed"
   },
   "keywords": [],
   "author": "",
