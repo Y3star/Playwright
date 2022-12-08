@@ -39,38 +39,52 @@ exports.MainPage = class MainPage {
         await this.page.goto("https://www.redmine.org/");
     }
     //
-    async clickReviewNavTab(selectedElement) {   
+    async methodReview(selectedElement) {   
         await expect(selectedElement).toBeVisible();
         await expect(selectedElement).toHaveText("Overview")
         await selectedElement.click();     
     }
-    async clickDownload() {
-        await this.downloadLink.click();
+    async methodDownload(selectedElement) {
+        await expect(selectedElement).toBeVisible();
+        await expect(selectedElement).toHaveText("Download")
+        await selectedElement.click();
     }
-    async clickActivity() {
-        await this.activityLink.click();
+    async methodActivity(selectedElement) {
+        await expect(selectedElement).toBeVisible();
+        await expect(selectedElement).toHaveText("Activity")
+        await selectedElement.click();
     }
-    async clickRoadmap() {
-        await this.roadmapLink.click();
+    async methodRoadmap(selectedElement) {
+        await expect(selectedElement).toBeVisible();
+        await expect(selectedElement).toHaveText("Roadmap")
+        await selectedElement.click();
     }
-    async clickTasks() {
-        await this.tasksLink.click();
+    async methodTasks(selectedElement) {
+        await expect(selectedElement).toBeVisible();
+        await expect(selectedElement).toHaveText("Issues")
+        await selectedElement.click();
     }
-    async clickNews() {
-        // expect
-        await this.newsLink.click();
-        // expect url
+    async methodNews(selectedElement) {
+        await expect(selectedElement).toBeVisible();
+        await expect(selectedElement).toHaveText("News")
+        await selectedElement.click();
     }
-    async clickWiki() {
-        await this.wikiLink.click();
+    async methodWiki(selectedElement) {
+        await expect(selectedElement).toBeVisible();
+        await expect(selectedElement).toHaveText("Wiki")
+        await selectedElement.click();
     }
 
-    async clickForums() {
-        await this.forumsLink.click();
+    async methodForums(selectedElement) {
+        await expect(selectedElement).toBeVisible();
+        await expect(selectedElement).toHaveText("Forums")
+        await selectedElement.click();
     }
 
-    async clickRepository() {
-        await this.repositoryLink.click();
+    async methodRepository(selectedElement) {
+        await expect(selectedElement).toBeVisible();
+        await expect(selectedElement).toHaveText("Repository")
+        await selectedElement.click();
     }
     //
 
