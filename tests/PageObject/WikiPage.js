@@ -1,5 +1,5 @@
 //WikiPage.js
-
+const delay = (ms) => new Promise((a) => setTimeout(a, ms)); // only create delay to see something in test
 exports.WikiPage = class WikiPage {
     constructor(page) {
         this.page = page;
@@ -8,5 +8,6 @@ exports.WikiPage = class WikiPage {
     }
     async scrElem() {
         await this.redmineListScr.screenshot({ path: "screenshotList.png" });
+        await delay(200);
     }
 };

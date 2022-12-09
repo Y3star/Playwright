@@ -15,7 +15,7 @@ test.beforeAll(async ({ browser }) => {
 
 test("Click,comparing text and whether an element is visible", async () => {
     await mainPage.goto();
-    await mainPage.methodReview(mainPage.reviewLink)
+    await mainPage.methodReview(mainPage.reviewLink);
     await mainPage.methodDownload(mainPage.downloadLink);
     await mainPage.methodActivity(mainPage.activityLink);
     await mainPage.methodRoadmap(mainPage.roadmapLink);
