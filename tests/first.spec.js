@@ -9,7 +9,7 @@ let page;
 let mainPage;
 let wikiPage;
 
-test.beforeAll(async ({ browser }) => { 
+test.beforeAll(async ({ browser }) => {
     page = await browser.newPage();
     mainPage = new MainPage(page);
     wikiPage = new WikiPage(page);
@@ -17,9 +17,9 @@ test.beforeAll(async ({ browser }) => {
 
 test("Click,comparing text and whether an element is visible", async () => {
     await mainPage.goto();
-    await mainPage.methodReview(mainPage.reviewLink);
+    await mainPage.methodReview(mainPage.reviewLink)
     await delay(250);
-
+  //  console.log("href: " + mainPage.href);
     await mainPage.methodDownload(mainPage.downloadLink);
     await delay(250);
 
@@ -43,7 +43,4 @@ test("Click,comparing text and whether an element is visible", async () => {
 
     await mainPage.methodRepository(mainPage.repositoryLink);
     await delay(700); // End test
-
-
 });
-

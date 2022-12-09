@@ -87,7 +87,7 @@ exports.MainPage = class MainPage {
     }
     //
     async methodGenerateText() {
-        await this.inputSearchInput.click();
+        //await this.inputSearchInput.click();
         await expect(this.inputSearchInput).toBeVisible();
         await this.inputSearchInput.screenshot({ path: "input.png" });
         await this.inputSearchInput.fill(ganerateSrting(15));
