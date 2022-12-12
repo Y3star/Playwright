@@ -13,14 +13,13 @@ test.beforeAll(async ({ browser }) => {
     loginPage = new LoginPage(page);
 });
 
-test("", async () => {
+test("Login Page checking input plus error message", async () => {
     await mainPage.goto();
     await mainPage.clickLogin();
     await loginPage.genSrting(loginPage.loginInput)
     await loginPage.genSrting(loginPage.passInput)
     await loginPage.clickFun(loginPage.checkBoxAutoLog)
     await loginPage.clickFun(loginPage.login)
-
-//end test
-
+    await loginPage.scrElem(loginPage.errorFlash)
+    // End test
 });

@@ -13,7 +13,7 @@ test.beforeAll(async ({ browser }) => {
     wikiPage = new WikiPage(page);
 });
 
-test("Click,comparing text and whether an element is visible", async () => {
+test("Main page , checking main-menu", async () => {
     await mainPage.goto();
     await mainPage.methodReview(mainPage.reviewLink);
     await mainPage.methodDownload(mainPage.downloadLink);
@@ -24,4 +24,5 @@ test("Click,comparing text and whether an element is visible", async () => {
     await mainPage.methodWiki(mainPage.wikiLink);
     await mainPage.methodForums(mainPage.forumsLink);
     await mainPage.methodRepository(mainPage.repositoryLink);
+    // End test
 });

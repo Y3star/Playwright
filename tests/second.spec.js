@@ -16,7 +16,7 @@ test.beforeAll(async ({ browser }) => {
     wikiPage = new WikiPage(page);
 });
 
-test("Assert ul , and written text in search input", async () => {
+test("Checking list's", async () => {
     await mainPage.goto();
     await wikiPage.scrElem();
     await expect(wikiPage.redmineList).toHaveText([

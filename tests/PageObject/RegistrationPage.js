@@ -1,4 +1,4 @@
-//LoginPage.js
+//RegistrationPage.js
 const { test, expect } = require("@playwright/test");
 const delay = (ms) => new Promise((a) => setTimeout(a, ms)); // only create delay to see something in test
 
@@ -14,14 +14,18 @@ function ganerateSrting(length) {
     return result;
 }
 
-exports.LoginPage = class LoginPage {
+exports.RegistrationPage = class RegistrationPage {
     constructor(page) {
         this.page = page;
-        this.loginInput = page.locator('[id="username"]');
-        this.passInput = page.locator('[id="password"]');
-        this.checkBoxAutoLog = page.locator('[id="autologin"]');
-        this.login = page.locator('[name="login"]');
-        this.errorFlash = page.locator('[id="flash_error"]');
+        this.loginInput = page.locator('[id="user_login"]');
+        this.passInput = page.locator('[id="user_password"]');
+        this.validInput = page.locator('[id="user_password_confirmation"]');
+        this.nameInput = page.locator('[id="user_firstname"]');
+        this.surnameInput = page.locator('[id="user_lastname"]');
+        this.emailInput = page.locator('[id="user_mail"]');
+        this.customInput = page.locator('[id="user_custom_field_values_3"]');
+        this.buttonCommit = page.locator('[name="commit"]')
+        this.errorShow = page.locator('[id="errorExplanation"]')
     }
 
     async genSrting(selectedElement) {
@@ -37,6 +41,6 @@ exports.LoginPage = class LoginPage {
     }
     async scrElem(selectedElement) {
         await delay(3000);
-        await selectedElement.screenshot({ path: "screenshotErr.png" });
+        await selectedElement.screenshot({ path: "screenshotErrReg.png" });
     }
 };
