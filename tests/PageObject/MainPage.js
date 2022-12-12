@@ -32,11 +32,17 @@ exports.MainPage = class MainPage {
             '[href="/projects/redmine/repository"]'
         ); //Repository
         //
+        this.loginLink = page.locator('[href="/login"]') // логин линк
+
     }
 
     async goto() {
         await this.page.goto("https://www.redmine.org/");
         await delay(200);
+    }
+    async clickLogin(){
+        await this.loginLink.click()
+await this.page.waitForLoadState('networkidle')
     }
     //
     async methodReview(selectedElement) {

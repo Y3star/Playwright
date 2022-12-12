@@ -18,7 +18,6 @@ test.beforeAll(async ({ browser }) => {
 
 test("Assert ul , and written text in search input", async () => {
     await mainPage.goto();
-    await mainPage.methodGenerateText();
     await wikiPage.scrElem();
     await expect(wikiPage.redmineList).toHaveText([
         "Redmine",
@@ -30,4 +29,25 @@ test("Assert ul , and written text in search input", async () => {
         "Who uses Redmine?",
         "Redmine books",
     ]);
+    console.log(await wikiPage.innerTextAll())
+    await wikiPage.scrElem2();
+    await expect(wikiPage.redmineList2).toHaveText([
+        "Multiple projects support",
+        "Flexible role based access control",
+        "Flexible issue tracking system",
+        "Gantt chart and calendar",
+        "News, documents & files management",
+        "Feeds & email notifications",
+        "Per project wiki",
+        "Per project forums",
+        "Time tracking",
+        "Custom fields for issues, time-entries, projects and users",
+        "SCM integration (SVN, CVS, Git, Mercurial and Bazaar)",
+        "Issue creation via email",
+        "Multiple LDAP authentication support",
+        "User self-registration support",
+        "Multilanguage support",
+        "Multiple databases support",
+    ]);
+    // End Test
 });
