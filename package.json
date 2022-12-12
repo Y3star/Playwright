@@ -5,7 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test1": "npx playwright test first.spec.js --headed",
-    "test2": "npx playwright test second.spec.js --headed"
+    "test2": "npx playwright test second.spec.js --headed",
+    "test3": "npx playwright test third.spec.js --headed",
+    "test4": "npx playwright test fourth.spec.js --headed",
+    "test5": "npx playwright test fifth.spec.js --headed"
   },
   "keywords": [],
   "author": "",
