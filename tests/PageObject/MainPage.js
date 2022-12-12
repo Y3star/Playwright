@@ -38,15 +38,15 @@ exports.MainPage = class MainPage {
 
     async goto() {
         await this.page.goto("https://www.redmine.org/");
-        await delay(200);
+        await delay(1000);
     }
     async clickLogin() {
         await this.loginLink.click();
-        await this.page.waitForLoadState("networkidle");
+        await this.page.waitForLoadState("load");
     }
     async clickReg() {
         await this.regLink.click();
-        await this.page.waitForLoadState("networkidle");
+        await this.page.waitForLoadState("load");
     }
     //
     async methodReview(selectedElement) {

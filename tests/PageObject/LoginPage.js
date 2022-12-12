@@ -25,7 +25,7 @@ exports.LoginPage = class LoginPage {
     }
 
     async genSrting(selectedElement) {
-        await expect(selectedElement).toBeVisible();
+        //await expect(selectedElement).toBeVisible();
         await selectedElement.fill(ganerateSrting(10));
         await delay(350);
     }

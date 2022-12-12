@@ -13,7 +13,7 @@ test.beforeAll(async ({ browser }) => {
     loginPage = new LoginPage(page);
 });
 
-test("Login Page checking input plus error message", async () => {
+test("Login Page checking input with screenshot error message", async () => {
     await mainPage.goto();
     await mainPage.clickLogin();
     await loginPage.genSrting(loginPage.loginInput)
