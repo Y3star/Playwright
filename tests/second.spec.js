@@ -29,7 +29,6 @@ test("Assert ul , and written text in search input", async () => {
         "Who uses Redmine?",
         "Redmine books",
     ]);
-    console.log(await wikiPage.innerTextAll())
     await wikiPage.scrElem2();
     await expect(wikiPage.redmineList2).toHaveText([
         "Multiple projects support",
