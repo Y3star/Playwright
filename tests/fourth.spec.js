@@ -21,7 +21,7 @@ test("Registration checking input plus error message", async () => {
     await regPage.genSrting(regPage.validInput);
     await regPage.genSrting(regPage.nameInput);
     await regPage.genSrting(regPage.surnameInput);
-    await regPage.genSrting(regPage.emailInput + "@gmail.com");
+    await regPage.genSrting(regPage.emailInput);
     await regPage.genSrting(regPage.customInput);
     await regPage.clickFun(regPage.buttonCommit);
     await regPage.scrElem(regPage.errorShow);
