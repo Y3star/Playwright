@@ -12,10 +12,9 @@ exports.TaskPage = class TaskPage {
         await expect(elements.length).toBe(countPages);
         if (elements.length == countPages && elements.length == 25) {
             await this.page.click('a[href*="per_page=50"]');
-        }
-        else {
+        } else {
             await this.page.click('a[href*="per_page=25"]');
         }
         await delay(3000);
-    } 
+    }
 };

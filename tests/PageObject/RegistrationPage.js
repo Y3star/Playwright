@@ -24,8 +24,8 @@ exports.RegistrationPage = class RegistrationPage {
         this.surnameInput = page.locator('[id="user_lastname"]');
         this.emailInput = page.locator('[id="user_mail"]');
         this.customInput = page.locator('[id="user_custom_field_values_3"]');
-        this.buttonCommit = page.locator('[name="commit"]')
-        this.errorShow = page.locator('[id="errorExplanation"]')
+        this.buttonCommit = page.locator('[name="commit"]');
+        this.errorShow = page.locator('[id="errorExplanation"]');
     }
 
     async genSrting(selectedElement) {
@@ -41,6 +41,8 @@ exports.RegistrationPage = class RegistrationPage {
     }
     async scrElem(selectedElement) {
         await delay(3000);
-        await selectedElement.screenshot({ path: "./scr/screenshotErrReg.png" });
+        await selectedElement.screenshot({
+            path: "./scr/screenshotErrReg.png",
+        });
     }
 };

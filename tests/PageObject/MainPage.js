@@ -33,7 +33,7 @@ exports.MainPage = class MainPage {
         ); //Repository
         //
         this.loginLink = page.locator('[href="/login"]'); // логин линк
-        this.regLink = page.locator('[href="/account/register"]') // рег линк
+        this.regLink = page.locator('[href="/account/register"]'); // рег линк
     }
 
     async goto() {
