@@ -9,11 +9,11 @@ exports.WikiPage = class WikiPage {
         this.redmineListScr2 = page.locator(".wiki.wiki-page ul:nth-child(9)");
     }
     async scrElem() {
-        await this.redmineListScr.screenshot({ path: "screenshotList.png" });
+        await this.redmineListScr.screenshot({ path: "./scr/screenshotList.png" });
         await delay(200);
     }
     async scrElem2() {
-        await this.redmineListScr2.screenshot({ path: "screenshotList2.png" });
+        await this.redmineListScr2.screenshot({ path: "./scr/screenshotList2.png" });
         await delay(200);
     }
 };

@@ -41,6 +41,6 @@ exports.RegistrationPage = class RegistrationPage {
     }
     async scrElem(selectedElement) {
         await delay(3000);
-        await selectedElement.screenshot({ path: "screenshotErrReg.png" });
+        await selectedElement.screenshot({ path: "./scr/screenshotErrReg.png" });
     }
 };

@@ -37,6 +37,6 @@ exports.LoginPage = class LoginPage {
     }
     async scrElem(selectedElement) {
         await delay(3000);
-        await selectedElement.screenshot({ path: "screenshotErr.png" });
+        await selectedElement.screenshot({ path: "./scr/screenshotErr.png" });
     }
 };
