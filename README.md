@@ -4,13 +4,17 @@
 
 **Before use test project you need install [node.js](https://nodejs.org/en/) last version.**
 
-**Also you need to install allure report with command:**
-```
-npm i -D @playwright/test allure-playwright
-```
 **Download git repository and use install node modules**
 ```
 git clone {repository URL}
+```
+**Open folder with your project and use command**
+```
+npm install
+```
+**Also you need to install allure report with command:**
+```
+npm i -D @playwright/test allure-playwright
 ```
 **After that we can run all our tests.**
 ```
@@ -30,3 +34,4 @@ npm run generate
 npm run report
 ```
 **You must have these allure report:**
+
