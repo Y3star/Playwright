@@ -34,4 +34,4 @@ npm run generate
 npm run report
 ```
 **You must have these allure report:**
-
+![](https://i.imgur.com/8KMav4x.png)
