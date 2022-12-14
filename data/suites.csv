@@ -1,0 +1,6 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Wed Dec 14 07:20:12 UTC 2022","Wed Dec 14 07:20:26 UTC 2022","13446","Google Chrome","fifth.spec.js","","","","Task page checking list",""
+"passed","Wed Dec 14 07:20:26 UTC 2022","Wed Dec 14 07:20:36 UTC 2022","10363","Google Chrome","third.spec.js","","","","Login Page checking input with screenshot error message",""
+"passed","Wed Dec 14 07:20:25 UTC 2022","Wed Dec 14 07:20:28 UTC 2022","3207","Google Chrome","second.spec.js","","","","Checking list's",""
+"passed","Wed Dec 14 07:20:12 UTC 2022","Wed Dec 14 07:20:27 UTC 2022","14521","Google Chrome","fourth.spec.js","","","","Registration checking input plus error message",""
+"passed","Wed Dec 14 07:20:12 UTC 2022","Wed Dec 14 07:20:25 UTC 2022","12571","Google Chrome","first.spec.js","","","","Main page , checking main-menu",""
