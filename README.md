@@ -33,5 +33,5 @@ npx allure generate allure-results --clean
 npm run generate
 npm run report
 ```
-**You must have these allure report:** [view report](y3star.github.io/Playwright/index.html)
+**You must have these allure report:** [view report](https://y3star.github.io/Playwright/index.html)
 ![](https://i.imgur.com/8KMav4x.png)
