@@ -33,7 +33,7 @@ npx allure generate allure-results --clean
 npm run generate
 npm run report
 ```
-**If u need see custom html reporter**
+**If you need see custom html reporter**
 ```
 npx playwright show-report
 ```
