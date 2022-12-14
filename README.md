@@ -28,10 +28,14 @@ npm  run test1
 ```
 npx allure generate allure-results --clean
 ```
-**allure open allure-report or for this project**
+**Allure open allure-report or for this project**
 ```
 npm run generate
 npm run report
+```
+**If u need see custom html reporter**
+```
+npx playwright show-report
 ```
 **You must have these allure report:** [view report](https://y3star.github.io/Playwright/index.html)
 ![](https://i.imgur.com/8KMav4x.png)
